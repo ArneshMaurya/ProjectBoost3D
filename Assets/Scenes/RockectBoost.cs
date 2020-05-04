@@ -29,38 +29,50 @@ public class RockectBoost : MonoBehaviour
     // Update is called once per frame
          void Update()
     {
-
         // Quaternion deltaRotation = Quaternion.Euler(m_EulerAngleVelocity * Time.deltaTime);
         //rigidBody.MoveRotation(rigidBody.rotation * deltaRotation);
-        
+        Thrust();
+        Rotate();
 
+    }
+
+    private void Rotate()
+    {
+        if (Input.GetKey(KeyCode.A))
+        {
+            //rigidBody.AddRelativeForce(Vector3.left);
+            //transform.forward += Vector3.forward * Time.deltaTime;
+            transform.Rotate(transform.forward);
+            print("A");
+
+
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            //rigidBody.AddRelativeForce(Vector3.right);
+            //transform.forward += Vector3.forward * Time.deltaTime;
+            transform.Rotate(-transform.forward);
+            print("D");
+
+        }
+    }
+
+    private void Thrust()
+    {
+        rigidBody.freezeRotation=true;//to stop the usless rotation
         if (Input.GetKey(KeyCode.Space))
         {
             Debug.Log("Space key was pressed.");
             rigidBody.AddRelativeForce(Vector3.up);
 
-            if(!m_MyAudioSource.isPlaying)
-            m_MyAudioSource.Play();
-        }else{
+            if (!m_MyAudioSource.isPlaying)
+                m_MyAudioSource.Play();
+        }
+        else
+        {
             m_MyAudioSource.Stop();
         }
-
-        if(Input.GetKey(KeyCode.A))
-        {   
-            //rigidBody.AddRelativeForce(Vector3.left);
-            //transform.forward += Vector3.forward * Time.deltaTime;
-            transform.Rotate(transform.forward);
-            print("A");
-            
-
-       }else if(Input.GetKey(KeyCode.D)){
-            //rigidBody.AddRelativeForce(Vector3.right);
-            //transform.forward += Vector3.forward * Time.deltaTime;
-            transform.Rotate(-transform.forward);
-            print("D");
-            
-        }
-
+        rigidBody.freezeRotation=false;//to stop the usless rotation
     }
-    
+
 }
