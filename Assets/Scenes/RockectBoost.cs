@@ -11,7 +11,8 @@ public class RockectBoost : MonoBehaviour {
     bool m_Play;
     //Detect when you use the toggle, ensures music isn’t played multiple times
     bool m_ToggleChange;
-    [SerializeField] float rcsTruster = 100f;
+    [SerializeField] float rcsTrust = 100f;
+    [SerializeField] float mainTrust = 80f;
 
     // Start is called before the first frame update
     void Start () {
@@ -34,16 +35,19 @@ public class RockectBoost : MonoBehaviour {
     }
 
     private void Rotate () {
+
         if (Input.GetKey (KeyCode.A)) {
             //rigidBody.AddRelativeForce(Vector3.left);
             //transform.forward += Vector3.forward * Time.deltaTime;
-            transform.Rotate (transform.forward);
+            float rotationSpeed = rcsTrust * Time.deltaTime;
+            transform.Rotate (Vector3.forward * rotationSpeed);
             print ("A");
 
         } else if (Input.GetKey (KeyCode.D)) {
             //rigidBody.AddRelativeForce(Vector3.right);
             //transform.forward += Vector3.forward * Time.deltaTime;
-            transform.Rotate (-transform.forward);
+            float rotationSpeed = rcsTrust * Time.deltaTime;
+            transform.Rotate (-Vector3.forward * rotationSpeed);
             print ("D");
 
         }
@@ -53,8 +57,8 @@ public class RockectBoost : MonoBehaviour {
         rigidBody.freezeRotation = true; //to stop the usless rotation
         if (Input.GetKey (KeyCode.Space)) {
             Debug.Log ("Space key was pressed.");
-            Vector3.up += rcsTruster * Time.deltaTime;
-            rigidBody.AddRelativeForce (Vector3.up);
+            float rockectSpeed = mainTrust * Time.deltaTime;
+            rigidBody.AddRelativeForce (Vector3.up * rockectSpeed);
 
             if (!m_MyAudioSource.isPlaying)
                 m_MyAudioSource.Play ();
