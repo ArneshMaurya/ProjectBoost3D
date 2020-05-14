@@ -1,0 +1,19 @@
+[0507/125638.439:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0507/130638.440:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0507/130638.442:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0507/131138.441:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0507/132638.442:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0507/134138.443:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0507/135638.443:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0507/141138.467:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0507/142638.469:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0507/144138.470:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0507/145638.474:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0507/151138.475:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0507/152638.477:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0507/154138.478:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0507/155638.483:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0507/160939.521:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0507/160939.544:ERROR:exception_snapshot_win.cc(98)] thread ID 1872 not found in process
+[0508/130619.737:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0508/131144.672:ERROR:crash_report_database_win.cc(469)] failed to stat report
