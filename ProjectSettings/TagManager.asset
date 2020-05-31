@@ -8,6 +8,7 @@ TagManager:
   - leftKey
   - rigthKey
   - UpKey
+  - FinalF
   layers:
   - Default
   - TransparentFX
