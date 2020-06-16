@@ -10,9 +10,14 @@ public class RockectBoost : MonoBehaviour {
     enum State { Alive, Dying, Trans }
     State state = State.Alive;
 
-    //Play the music
+    
     bool m_Play;
-    bool m_ToggleChange;
+    bool m_ToggleChangeCollision=false;
+
+    int currentLvl = 0; 
+
+    [SerializeField] int totallvl = 6;
+    
     [SerializeField] float rcsTrust = 100f;
     [SerializeField] float mainTrust = 80f;
 
@@ -37,12 +42,24 @@ public class RockectBoost : MonoBehaviour {
             Thrust ();
             Rotate ();
         }
+
+        if(Input.GetKey(KeyCode.K)){
+
+            m_ToggleChangeCollision=!m_ToggleChangeCollision;
+        }
+
+        if(Input.GetKey(KeyCode.L))
+        {
+            nextLvl();
+        }
+
+
         //TouchControll ();
     }
 
     void OnCollisionEnter (Collision collision) {
 
-        if (state != State.Alive) {
+        if (state != State.Alive || m_ToggleChangeCollision) {
             return;
         }
 
@@ -81,8 +98,9 @@ public class RockectBoost : MonoBehaviour {
     }
 
     private void nextLvl () {
-
-        UnityEngine.SceneManagement.SceneManager.LoadScene (1); //todo allow for more level
+        currentLvl = SceneManager.GetActiveScene().buildIndex;
+        currentLvl++;
+        UnityEngine.SceneManagement.SceneManager.LoadScene (currentLvl%totallvl); //todo allow for more level
 
     }
 
