@@ -54,7 +54,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
-    serializedVersion: 10
+    serializedVersion: 12
     m_Resolution: 2
     m_BakeResolution: 10
     m_AtlasSize: 512
@@ -62,6 +62,7 @@ LightmapSettings:
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
     m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
     m_Padding: 2
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
@@ -76,10 +77,16 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 256
     m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 256
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 2
+    m_PVRDenoiserTypeDirect: 0
+    m_PVRDenoiserTypeIndirect: 0
+    m_PVRDenoiserTypeAO: 0
     m_PVRFilterTypeDirect: 0
     m_PVRFilterTypeIndirect: 0
     m_PVRFilterTypeAO: 0
-    m_PVRFilteringMode: 1
+    m_PVREnvironmentMIS: 0
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
@@ -87,7 +94,9 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
-    m_ShowResolutionOverlay: 1
+    m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -119,11 +128,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
-        type: 3}
-      propertyPath: m_Name
-      value: Obst1 (12)
-      objectReference: {fileID: 0}
     - target: {fileID: 690036077627254056, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -199,6 +203,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ceba41d6d44d6034e90187f9af4d1230, type: 2}
+    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
+        type: 3}
+      propertyPath: m_Name
+      value: Obst1 (12)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c3c50ac60d4c04e83b12ea9a88f898, type: 3}
 --- !u!1001 &63633902
@@ -208,11 +217,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
-        type: 3}
-      propertyPath: m_Name
-      value: Obst2
-      objectReference: {fileID: 0}
     - target: {fileID: 690036077627254056, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -288,6 +292,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ceba41d6d44d6034e90187f9af4d1230, type: 2}
+    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
+        type: 3}
+      propertyPath: m_Name
+      value: Obst2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c3c50ac60d4c04e83b12ea9a88f898, type: 3}
 --- !u!1001 &103626373
@@ -297,11 +306,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
-        type: 3}
-      propertyPath: m_Name
-      value: Obst2 (11)
-      objectReference: {fileID: 0}
     - target: {fileID: 690036077627254056, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -377,6 +381,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ceba41d6d44d6034e90187f9af4d1230, type: 2}
+    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
+        type: 3}
+      propertyPath: m_Name
+      value: Obst2 (11)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c3c50ac60d4c04e83b12ea9a88f898, type: 3}
 --- !u!108 &170076734 stripped
@@ -465,11 +474,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
-        type: 3}
-      propertyPath: m_Name
-      value: Obst1 (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 690036077627254056, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -545,6 +549,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ceba41d6d44d6034e90187f9af4d1230, type: 2}
+    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
+        type: 3}
+      propertyPath: m_Name
+      value: Obst1 (3)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c3c50ac60d4c04e83b12ea9a88f898, type: 3}
 --- !u!1001 &234557435
@@ -554,11 +563,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
-        type: 3}
-      propertyPath: m_Name
-      value: Obst1 (16)
-      objectReference: {fileID: 0}
     - target: {fileID: 690036077627254056, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -634,6 +638,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ceba41d6d44d6034e90187f9af4d1230, type: 2}
+    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
+        type: 3}
+      propertyPath: m_Name
+      value: Obst1 (16)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c3c50ac60d4c04e83b12ea9a88f898, type: 3}
 --- !u!1001 &291900449
@@ -716,11 +725,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
-        type: 3}
-      propertyPath: m_Name
-      value: Obst1 (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 690036077627254056, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -796,6 +800,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ceba41d6d44d6034e90187f9af4d1230, type: 2}
+    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
+        type: 3}
+      propertyPath: m_Name
+      value: Obst1 (2)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c3c50ac60d4c04e83b12ea9a88f898, type: 3}
 --- !u!1001 &393215046
@@ -878,11 +887,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
-        type: 3}
-      propertyPath: m_Name
-      value: Obst2 (6)
-      objectReference: {fileID: 0}
     - target: {fileID: 690036077627254056, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -958,6 +962,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ceba41d6d44d6034e90187f9af4d1230, type: 2}
+    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
+        type: 3}
+      propertyPath: m_Name
+      value: Obst2 (6)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c3c50ac60d4c04e83b12ea9a88f898, type: 3}
 --- !u!1001 &563698599
@@ -967,11 +976,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
-        type: 3}
-      propertyPath: m_Name
-      value: Obst2 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 690036077627254056, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1047,6 +1051,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ceba41d6d44d6034e90187f9af4d1230, type: 2}
+    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
+        type: 3}
+      propertyPath: m_Name
+      value: Obst2 (1)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c3c50ac60d4c04e83b12ea9a88f898, type: 3}
 --- !u!1001 &633965089
@@ -1129,11 +1138,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
-        type: 3}
-      propertyPath: m_Name
-      value: Obst2 (12)
-      objectReference: {fileID: 0}
     - target: {fileID: 690036077627254056, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1209,6 +1213,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ceba41d6d44d6034e90187f9af4d1230, type: 2}
+    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
+        type: 3}
+      propertyPath: m_Name
+      value: Obst2 (12)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c3c50ac60d4c04e83b12ea9a88f898, type: 3}
 --- !u!1001 &648306781
@@ -1218,11 +1227,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
-        type: 3}
-      propertyPath: m_Name
-      value: Obst1 (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 690036077627254056, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1298,6 +1302,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ceba41d6d44d6034e90187f9af4d1230, type: 2}
+    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
+        type: 3}
+      propertyPath: m_Name
+      value: Obst1 (5)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c3c50ac60d4c04e83b12ea9a88f898, type: 3}
 --- !u!1001 &757456564
@@ -1380,11 +1389,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
-        type: 3}
-      propertyPath: m_Name
-      value: Obst1 (11)
-      objectReference: {fileID: 0}
     - target: {fileID: 690036077627254056, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1460,6 +1464,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f4f803e924d975b49bdb520793c4cb6d, type: 2}
+    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
+        type: 3}
+      propertyPath: m_Name
+      value: Obst1 (11)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c3c50ac60d4c04e83b12ea9a88f898, type: 3}
 --- !u!1001 &803654752
@@ -1469,11 +1478,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
-        type: 3}
-      propertyPath: m_Name
-      value: Obst2 (8)
-      objectReference: {fileID: 0}
     - target: {fileID: 690036077627254056, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1549,6 +1553,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ceba41d6d44d6034e90187f9af4d1230, type: 2}
+    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
+        type: 3}
+      propertyPath: m_Name
+      value: Obst2 (8)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c3c50ac60d4c04e83b12ea9a88f898, type: 3}
 --- !u!1001 &820075559
@@ -1558,11 +1567,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
-        type: 3}
-      propertyPath: m_Name
-      value: Obst1 (7)
-      objectReference: {fileID: 0}
     - target: {fileID: 690036077627254056, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1638,6 +1642,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ceba41d6d44d6034e90187f9af4d1230, type: 2}
+    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
+        type: 3}
+      propertyPath: m_Name
+      value: Obst1 (7)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c3c50ac60d4c04e83b12ea9a88f898, type: 3}
 --- !u!1001 &832594934
@@ -1647,11 +1656,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
-        type: 3}
-      propertyPath: m_Name
-      value: Obst2 (9)
-      objectReference: {fileID: 0}
     - target: {fileID: 690036077627254056, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1727,6 +1731,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ceba41d6d44d6034e90187f9af4d1230, type: 2}
+    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
+        type: 3}
+      propertyPath: m_Name
+      value: Obst2 (9)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c3c50ac60d4c04e83b12ea9a88f898, type: 3}
 --- !u!1001 &874351242
@@ -1736,11 +1745,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
-        type: 3}
-      propertyPath: m_Name
-      value: Obst2 (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 690036077627254056, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1816,6 +1820,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ceba41d6d44d6034e90187f9af4d1230, type: 2}
+    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
+        type: 3}
+      propertyPath: m_Name
+      value: Obst2 (5)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c3c50ac60d4c04e83b12ea9a88f898, type: 3}
 --- !u!1001 &998413325
@@ -1825,11 +1834,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
-        type: 3}
-      propertyPath: m_Name
-      value: Obst2 (14)
-      objectReference: {fileID: 0}
     - target: {fileID: 690036077627254056, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1905,6 +1909,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ceba41d6d44d6034e90187f9af4d1230, type: 2}
+    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
+        type: 3}
+      propertyPath: m_Name
+      value: Obst2 (14)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c3c50ac60d4c04e83b12ea9a88f898, type: 3}
 --- !u!1001 &1107426207
@@ -1914,11 +1923,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
-        type: 3}
-      propertyPath: m_Name
-      value: Obst1 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 690036077627254056, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1994,6 +1998,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ceba41d6d44d6034e90187f9af4d1230, type: 2}
+    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
+        type: 3}
+      propertyPath: m_Name
+      value: Obst1 (1)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c3c50ac60d4c04e83b12ea9a88f898, type: 3}
 --- !u!1001 &1193079762
@@ -2003,11 +2012,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
-        type: 3}
-      propertyPath: m_Name
-      value: Obst2 (10)
-      objectReference: {fileID: 0}
     - target: {fileID: 690036077627254056, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2083,6 +2087,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ceba41d6d44d6034e90187f9af4d1230, type: 2}
+    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
+        type: 3}
+      propertyPath: m_Name
+      value: Obst2 (10)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c3c50ac60d4c04e83b12ea9a88f898, type: 3}
 --- !u!1001 &1339712887
@@ -2092,11 +2101,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
-        type: 3}
-      propertyPath: m_Name
-      value: Obst1 (14)
-      objectReference: {fileID: 0}
     - target: {fileID: 690036077627254056, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2172,6 +2176,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ceba41d6d44d6034e90187f9af4d1230, type: 2}
+    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
+        type: 3}
+      propertyPath: m_Name
+      value: Obst1 (14)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c3c50ac60d4c04e83b12ea9a88f898, type: 3}
 --- !u!1001 &1341368300
@@ -2181,11 +2190,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
-        type: 3}
-      propertyPath: m_Name
-      value: Obst1 (6)
-      objectReference: {fileID: 0}
     - target: {fileID: 690036077627254056, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2261,6 +2265,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ceba41d6d44d6034e90187f9af4d1230, type: 2}
+    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
+        type: 3}
+      propertyPath: m_Name
+      value: Obst1 (6)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c3c50ac60d4c04e83b12ea9a88f898, type: 3}
 --- !u!1001 &1502871677
@@ -2270,11 +2279,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
-        type: 3}
-      propertyPath: m_Name
-      value: Obst1 (18)
-      objectReference: {fileID: 0}
     - target: {fileID: 690036077627254056, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2350,6 +2354,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ceba41d6d44d6034e90187f9af4d1230, type: 2}
+    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
+        type: 3}
+      propertyPath: m_Name
+      value: Obst1 (18)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c3c50ac60d4c04e83b12ea9a88f898, type: 3}
 --- !u!1001 &1573133685
@@ -2359,11 +2368,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
-        type: 3}
-      propertyPath: m_Name
-      value: Obst1
-      objectReference: {fileID: 0}
     - target: {fileID: 690036077627254056, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2439,6 +2443,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ceba41d6d44d6034e90187f9af4d1230, type: 2}
+    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
+        type: 3}
+      propertyPath: m_Name
+      value: Obst1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c3c50ac60d4c04e83b12ea9a88f898, type: 3}
 --- !u!1001 &1590520019
@@ -2448,11 +2457,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
-        type: 3}
-      propertyPath: m_Name
-      value: Obst1 (13)
-      objectReference: {fileID: 0}
     - target: {fileID: 690036077627254056, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2528,6 +2532,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ceba41d6d44d6034e90187f9af4d1230, type: 2}
+    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
+        type: 3}
+      propertyPath: m_Name
+      value: Obst1 (13)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c3c50ac60d4c04e83b12ea9a88f898, type: 3}
 --- !u!1001 &1600244598
@@ -2537,16 +2546,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
-        type: 3}
-      propertyPath: m_Name
-      value: LaunchPad (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
-        type: 3}
-      propertyPath: m_TagString
-      value: Friendly
-      objectReference: {fileID: 0}
     - target: {fileID: 690036077627254056, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2622,6 +2621,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b291e0e791389874fa9c3f6c68d285fa, type: 2}
+    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
+        type: 3}
+      propertyPath: m_Name
+      value: LaunchPad (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
+        type: 3}
+      propertyPath: m_TagString
+      value: Friendly
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c3c50ac60d4c04e83b12ea9a88f898, type: 3}
 --- !u!1001 &1803340195
@@ -2704,11 +2713,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
-        type: 3}
-      propertyPath: m_Name
-      value: Obst2 (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 690036077627254056, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2784,6 +2788,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ceba41d6d44d6034e90187f9af4d1230, type: 2}
+    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
+        type: 3}
+      propertyPath: m_Name
+      value: Obst2 (3)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c3c50ac60d4c04e83b12ea9a88f898, type: 3}
 --- !u!1001 &1883242628
@@ -2793,11 +2802,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
-        type: 3}
-      propertyPath: m_Name
-      value: Obst1 (8)
-      objectReference: {fileID: 0}
     - target: {fileID: 690036077627254056, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2873,6 +2877,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ceba41d6d44d6034e90187f9af4d1230, type: 2}
+    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
+        type: 3}
+      propertyPath: m_Name
+      value: Obst1 (8)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c3c50ac60d4c04e83b12ea9a88f898, type: 3}
 --- !u!1001 &2032475655
@@ -2882,11 +2891,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
-        type: 3}
-      propertyPath: m_Name
-      value: Obst2 (13)
-      objectReference: {fileID: 0}
     - target: {fileID: 690036077627254056, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2962,6 +2966,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ceba41d6d44d6034e90187f9af4d1230, type: 2}
+    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
+        type: 3}
+      propertyPath: m_Name
+      value: Obst2 (13)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c3c50ac60d4c04e83b12ea9a88f898, type: 3}
 --- !u!1001 &2036131416
@@ -2971,11 +2980,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
-        type: 3}
-      propertyPath: m_Name
-      value: Obst1 (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 690036077627254056, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3051,6 +3055,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ceba41d6d44d6034e90187f9af4d1230, type: 2}
+    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
+        type: 3}
+      propertyPath: m_Name
+      value: Obst1 (4)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c3c50ac60d4c04e83b12ea9a88f898, type: 3}
 --- !u!1001 &2125682181
@@ -3060,11 +3069,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
-        type: 3}
-      propertyPath: m_Name
-      value: Obst2 (7)
-      objectReference: {fileID: 0}
     - target: {fileID: 690036077627254056, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3140,6 +3144,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ceba41d6d44d6034e90187f9af4d1230, type: 2}
+    - target: {fileID: 690036077627254060, guid: 91c3c50ac60d4c04e83b12ea9a88f898,
+        type: 3}
+      propertyPath: m_Name
+      value: Obst2 (7)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c3c50ac60d4c04e83b12ea9a88f898, type: 3}
 --- !u!1001 &366410306037300232
@@ -3236,7 +3245,7 @@ PrefabInstance:
     - target: {fileID: 5795465274122169021, guid: 2b0582c9d7be3c840b8cecb06e54ece7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.04
+      value: 8.15
       objectReference: {fileID: 0}
     - target: {fileID: 5795465274122169021, guid: 2b0582c9d7be3c840b8cecb06e54ece7,
         type: 3}
@@ -3282,24 +3291,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1599009468571500421, guid: 2b0582c9d7be3c840b8cecb06e54ece7,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 56
-      objectReference: {fileID: 0}
-    - target: {fileID: 1599009468571500421, guid: 2b0582c9d7be3c840b8cecb06e54ece7,
-        type: 3}
-      propertyPath: m_Drag
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1316580266, guid: 2b0582c9d7be3c840b8cecb06e54ece7, type: 3}
-      propertyPath: rcsTrust
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 1316580266, guid: 2b0582c9d7be3c840b8cecb06e54ece7, type: 3}
-      propertyPath: mainTrust
-      value: 80
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b0582c9d7be3c840b8cecb06e54ece7, type: 3}
